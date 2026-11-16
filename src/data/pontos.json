@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "nome": "MASP - Museu de Arte de São Paulo",
+    "categoria": "museu",
+    "foto": "https://picsum.photos/seed/masp/400/300",
+    "descricao": "Um dos museus de arte mais importantes da América Latina, famoso pelo vão livre de 74 metros.",
+    "curiosidade": "O MASP foi inaugurado em 1968 e seu vão livre é um dos maiores do mundo em estrutura de concreto.",
+    "latitude": -23.5614,
+    "longitude": -46.6559,
+    "raio": 150
+  },
+  {
+    "id": "2",
+    "nome": "Parque Ibirapuera",
+    "categoria": "parque",
+    "foto": "https://picsum.photos/seed/ibirapuera/400/300",
+    "descricao": "Maior parque urbano da cidade, com lagos, museus e as obras de Oscar Niemeyer.",
+    "curiosidade": "Inaugurado em 1954 para as comemorações dos 400 anos de São Paulo.",
+    "latitude": -23.5874,
+    "longitude": -46.6576,
+    "raio": 250
+  },
+  {
+    "id": "3",
+    "nome": "Theatro Municipal",
+    "categoria": "monumento",
+    "foto": "https://picsum.photos/seed/theatro/400/300",
+    "descricao": "Teatro de arquitetura eclética inaugurado em 1911, palco da Semana de Arte Moderna.",
+    "curiosidade": "Em 1922 o Theatro sediou a Semana de Arte Moderna, marco do modernismo brasileiro.",
+    "latitude": -23.5453,
+    "longitude": -46.6388,
+    "raio": 150
+  },
+  {
+    "id": "4",
+    "nome": "Catedral da Sé",
+    "categoria": "monumento",
+    "foto": "https://picsum.photos/seed/se/400/300",
+    "descricao": "Catedral neogótica no centro histórico, ponto zero da cidade.",
+    "curiosidade": "A Praça da Sé é o marco zero de onde se medem as distâncias das rodovias paulistas.",
+    "latitude": -23.5505,
+    "longitude": -46.6333,
+    "raio": 150
+  },
+  {
+    "id": "5",
+    "nome": "Pinacoteca do Estado",
+    "categoria": "museu",
+    "foto": "https://picsum.photos/seed/pinacoteca/400/300",
+    "descricao": "O museu de artes visuais mais antigo da cidade, em edifício de tijolos de 1900.",
+    "curiosidade": "Fundada em 1905, é o museu de arte mais antigo de São Paulo.",
+    "latitude": -23.5343,
+    "longitude": -46.6339,
+    "raio": 150
+  },
+  {
+    "id": "6",
+    "nome": "Museu do Ipiranga",
+    "categoria": "museu",
+    "foto": "https://picsum.photos/seed/ipiranga/400/300",
+    "descricao": "Museu Paulista, que guarda a história da Independência do Brasil, em frente ao Parque da Independência.",
+    "curiosidade": "O prédio foi inaugurado em 1895 e reaberto em 2022 após longa restauração.",
+    "latitude": -23.5855,
+    "longitude": -46.6097,
+    "raio": 200
+  },
+  {
+    "id": "7",
+    "nome": "Mercado Municipal",
+    "categoria": "monumento",
+    "foto": "https://picsum.photos/seed/mercado/400/300",
+    "descricao": "Mercadão com vitrais e o famoso sanduíche de mortadela.",
+    "curiosidade": "Inaugurado em 1933, tem vitrais que retratam a produção agrícola.",
+    "latitude": -23.5416,
+    "longitude": -46.6291,
+    "raio": 120
+  },
+  {
+    "id": "8",
+    "nome": "Parque da Independência",
+    "categoria": "parque",
+    "foto": "https://picsum.photos/seed/independencia/400/300",
+    "descricao": "Jardins em estilo francês e Monumento à Independência.",
+    "curiosidade": "O Monumento à Independência abriga a Capela Imperial com os restos mortais de D. Pedro I.",
+    "latitude": -23.5846,
+    "longitude": -46.6094,
+    "raio": 200
+  }
+]
