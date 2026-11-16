@@ -1,6 +1,17 @@
 # Guia Turístico e Histórico Interativo (PAM II – Projeto 3)
 
-App React Native (Expo) que destaca pontos turísticos de São Paulo conforme você se move pela cidade.
+App React Native (Expo) que destaca pontos turísticos de São Paulo conforme o usuário se move pela cidade.
+
+Repositório: https://github.com/NSTrindade/guia-turistico
+
+## APK para teste
+O APK (build release, abre sozinho, sem servidor) está em:
+
+**`apk/guia-turistico.apk`**
+
+Para instalar: copie o arquivo para um celular Android, abra e permita a instalação de fontes desconhecidas. Ao abrir, aceite as permissões de **localização** e **notificações**.
+
+O mapa usa a chave do Google Maps embutida no APK. No `app.json` do repositório a chave fica como `AIzaSyDAFnYDZ2QtfFO3zfz_jh93vBNKlm17-0k`; para compilar o projeto você precisa colocar a sua.
 
 ## Requisitos do projeto atendidos
 | Recurso | Implementação |
@@ -11,38 +22,35 @@ App React Native (Expo) que destaca pontos turísticos de São Paulo conforme vo
 | Sensor | `Accelerometer`: "Agite para um ponto aleatório" centraliza o mapa |
 | Dados | `src/data/pontos.json` (estático, sem banco externo) |
 
-## Como executar
-Pré-requisitos: Node 18+, Android Studio (SDK + emulador ou celular com depuração USB) e JDK 17.
+## Como usar o app
+- O mapa mostra os pontos turísticos e a sua posição.
+- Use os filtros (Todos, museu, parque, monumento) e toque num ponto ou num card para centralizar no mapa.
+- **Agite o celular** para ir a um ponto aleatório.
+- Ao chegar perto de um ponto, o app envia uma notificação com uma curiosidade histórica.
+- **Widget:** na tela inicial, segure em um espaço vazio > Widgets > "Guia Turístico" > "Monumento mais próximo". Abra o app uma vez antes, para ele receber a localização.
+
+## Como executar o código
+Pré-requisitos: Node 18+, Android Studio (SDK) e JDK 17. No Windows, instale o SDK em um caminho **sem espaços** (ex.: `C:\Android\Sdk`) e defina `ANDROID_HOME`.
 
 1. `npm install`
-2. Coloque sua chave do Google Maps em `app.json` (`android.config.googleMaps.apiKey`). Crie em https://console.cloud.google.com ativando **Maps SDK for Android**.
+2. Coloque a chave do Google Maps em `app.json` (`android.config.googleMaps.apiKey`). Crie em https://console.cloud.google.com ativando **Maps SDK for Android**.
 3. `npx expo prebuild --clean`
-4. `npx expo run:android` (compila e instala o app com dev client)
+4. Celular com depuração USB (ou emulador com Google Play): `npx expo run:android`
 5. Nas próximas vezes: `npm start` e abrir o app instalado.
 
-> Não funciona no Expo Go: widget e react-native-maps com chave própria exigem build nativo (dev client).
+> Não funciona no Expo Go: o widget exige build nativo (dev client).
 
-### Testar no emulador
-No emulador Android: `...` > Location, defina uma coordenada (ex.: MASP: -23.5614, -46.6559) para disparar a notificação. Para o sensor, use Virtual sensors > Move > "Shake".
-
-### Adicionar o widget
-Na tela inicial do Android: segure > Widgets > "Guia Turístico" > "Monumento mais próximo". Abra o app uma vez para ele receber a localização.
-
-## Criar o repositório no GitHub
-```bash
-git init
-git add .
-git commit -m "Projeto Guia Turístico - PAM II"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/guia-turistico.git
-git push -u origin main
+### Gerar o APK (release)
 ```
-Crie antes o repositório vazio em https://github.com/new (sem README). Não suba sua chave do Maps: antes do commit, deixe `COLOQUE_SUA_CHAVE_GOOGLE_MAPS_AQUI` no `app.json`.
+npx expo run:android --variant release
+```
+O arquivo é gerado em `android/app/build/outputs/apk/release/app-release.apk`.
 
 ## Estrutura
 ```
 App.js                      tela principal (mapa, lista, GPS, sensor)
 index.js                    registro do app e do widget
+apk/guia-turistico.apk      APK release para teste
 src/data/pontos.json        pontos de interesse
 src/utils/geo.js            Haversine e ponto mais próximo
 src/services/notificacoes.js
